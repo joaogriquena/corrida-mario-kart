@@ -13,3 +13,12 @@ const player2 = {
     PODER: 4,
     PONTOS: 0,
 }
+
+function rollDice() {
+    return Math.floor(Math.random() * 6) + 1;
+}
+
+(async function Main() {
+    console.log(`🏁🚨 Corrida entre ${player1.NOME} e ${player2.NOME} começando... 
+`)
+})()
