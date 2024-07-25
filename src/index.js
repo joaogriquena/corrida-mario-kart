@@ -56,6 +56,18 @@ async function playRaceEngine(character1, character2) {
     let totalTestSkill1 = 0
     let totalTestSkill2 = 0
 
+    if (block === "RETA") {
+        totalTestSkill1 = character1.VELOCIDADE + diceResult1
+        totalTestSkill2 = character2.VELOCIDADE + diceResult2
+    }
+    if (block === "CURVA") {
+        totalTestSkill1 = character1.MANOBRABILIDADE + diceResult1
+        totalTestSkill2 = character2.MANOBRABILIDADE + diceResult2
+    }
+    if (block === "CONFRONTO") {
+
+    }
+
 }
 
 (async function Main() {
