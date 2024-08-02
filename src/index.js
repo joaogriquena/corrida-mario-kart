@@ -78,6 +78,18 @@ async function playRaceEngine(character1, character2) {
         if (block === "CONFRONTO") {
             let powerResult1 = diceResult1 + character1.PODER
             let powerResult2 = diceResult2 + character2.PODER
+
+            console.log(`${character1.NOME} cronfotou com ${character2.NOME}!🥊🥊`)
+
+            await logRollResult(character1.NOME, "poder", diceResult1, character1.PODER)
+            await logRollResult(character2.NOME, "poder", diceResult2, character2.PODER)
+
+            character2.PONTOS -= powerResult1 > powerResult2 && character2.PONTOS > 0 ? 1 : 0
+
+            character1.PONTOS -= powerResult2 > powerResult1 && character1.PONTOS > 0 ? 1 : 0
+
+            console.log(powerResult1 === powerResult2 ? 'Empate!' : '')
+
         }
 
         //verificando o vencedor
